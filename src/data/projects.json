@@ -1,0 +1,408 @@
+[
+  {
+    "id": "pol-ui",
+    "title": "Pol-UI",
+    "year": 2023,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": 70,
+      "y": 20
+    },
+    "textColor": "#000",
+    "width": 480,
+    "backgroundColor": "#b49cff",
+    "pathToImg": "/polui/0.webp",
+    "tags": ["React", "NPM", "UI", "Components", "JSX"],
+    "invisibleTags": [
+      "frontend",
+      "Inputs",
+      "UX",
+      "Beautiful",
+      "Instalable",
+      "Buttons",
+      "Styled-Components",
+      "TypeScript",
+      "Reusable",
+      "Easy"
+    ],
+    "description": {
+      "en": "Reusable React components that are easy to use just by installing an NPM package. Created with styled-components, React, and TypeScript, the components are fully customizable and ready to integrate on any website. It saves time and effort using the pre-built elements for common aspects of user interface such as buttons, inputs and more.",
+      "es": "Componentes de React reutilizables faciles de usar con solo instalar un paquete NPM. Creados con styled-componentes, React y TypeScript, los componentes son totalmente personalizables y están listos para integrarse en cualquier sitio web. Ahorra tiempo y esfuerzo utilizando los elementos pre-construidos para aspectos comunes de interfaz de usuario como botones, inputs y más.",
+      "ca": "Components de React reutilitzables facils d'usar amb només instal·lar un paquet NPM. Creats amb styled-components, React i TypeScript, els components són totalment personalitzables i estan llestos per integrar-se en qualsevol lloc web. Estalvia temps i esforç utilitzant els elements pre-construïts per a aspectes comuns d'interfície d'usuari com botons, inputs i més.",
+      "de": "Wiederverwendbare React-Komponenten, die einfach zu verwenden sind, indem Sie nur ein NPM-Paket installieren. Erstellt mit styled-components, React und TypeScript, sind die Komponenten vollständig anpassbar und bereit, in jede Website integriert zu werden. Sparen Sie Zeit und Mühe, indem Sie die vorgefertigten Elemente für gängige Aspekte der Benutzeroberfläche wie Schaltflächen, Eingaben und mehr verwenden."
+    },
+    "githubLink": "https://github.com/PolGubau/gubauafternoons.com",
+    "npmCommand": "npm i pol-ui",
+    "npmLink": "https://www.npmjs.com/package/pol-ui",
+    "link": "https://github.com/PolGubau/pol-ui"
+  },
+  {
+    "id": "paris2024",
+    "title": "Paris 2024",
+    "year": 2023,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": -20,
+      "y": -15
+    },
+    "textColor": "#000",
+    "width": 450,
+    "backgroundColor": "#FFEDAB",
+    "pathToImg": "/Paris2024/0.webp",
+    "tags": ["Svelte", "Javascript", "CSS", "Web", "UI"],
+    "madeFor": {
+      "en": "Linnaeus University",
+      "es": "Linnaeus University",
+      "ca": "Linnaeus University",
+      "de": "Linnaeus University"
+    },
+    "invisibleTags": ["SvelteKit", "JSX"],
+    "description": {
+      "en": "Delivery of a group project for a Swedish university. A multi-frame analysis for the Paris 2024 Olympic Games.",
+      "es": "Entrega de un proyecto grupal para una universidad Sueca. Un análisis completo de los Juegos Olímpicos de París 2024.",
+      "ca": "Lliurament d'un projecte grupal per a una universitat Sueca. Una anàlisi complet dels Jocs Olímpics de París 2024.",
+      "de": "Durchführung eines Gruppenprojekts für eine schwedische Universität. Eine Multi-Frame-Analyse für die Olympischen Spiele 2024 in Paris."
+    },
+    "githubLink": "https://github.com/PolGubau/paris2024/#introduction",
+    "link": "https://paris2024.vercel.app"
+  },
+  {
+    "id": "Beecipes",
+    "title": "Beecipes",
+    "year": 2023,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": 40,
+      "y": 0
+    },
+    "textColor": "#000",
+    "width": 700,
+    "backgroundColor": "#FBFF84",
+    "pathToImg": "/Beecipes/0.webp",
+    "tags": ["React", "Recoil", "UI", "Spoonacular API", "JOBarcelona"],
+    "madeFor": {
+      "en": "JOBarcelona Hackathon 2023",
+      "es": "JOBarcelona Hackathon 2023",
+      "ca": "JOBarcelona Hackathon 2023",
+      "de": "JOBarcelona Hackathon 2023"
+    },
+    "invisibleTags": [
+      "frontend",
+      "recipes",
+      "food",
+      "bees",
+      "honey",
+      "api",
+      "web",
+      "react",
+      "Styled Components",
+      "ui"
+    ],
+    "description": {
+      "en": "My Participation in JOBarcelona 2023 hackathon. Beecipes is a recipe app that uses the Spoonacular API to fetch recipes and display them in a user-friendly way.",
+      "es": "Mi participación en el hackathon JOBarcelona 2023. Beecipes es una aplicación de recetas que utiliza la API de Spoonacular para obtener recetas y mostrarlas de una manera fácil de usar.",
+      "ca": "La meva participació al hackathon JOBarcelona 2023. Beecipes és una aplicació de receptes que utilitza l'API Spoonacular per obtenir receptes i mostrar-les d'una manera fàcil d'utilitzar.",
+      "de": "Meine Teilnahme am JOBarcelona 2023 Hackathon. Beecipes ist eine Rezept-App, die die Spoonacular API verwendet, um Rezepte abzurufen und sie benutzerfreundlich anzuzeigen."
+    },
+    "githubLink": "https://github.com/PolGubau/hackathon-JOBarcelona-recipes-2023",
+    "link": "https://beecipes.vercel.app"
+  },
+  {
+    "id": "NUWE",
+    "title": "NUWE",
+    "year": 2022,
+    "category": {
+      "en": "design",
+      "es": "diseño",
+      "ca": "disseny",
+      "de": "design"
+    },
+    "pointOfInterest": {
+      "x": 70,
+      "y": 70
+    },
+    "textColor": "#000",
+    "width": 400,
+    "backgroundColor": "#c1ffab",
+    "pathToImg": "/NUWE/0.webp",
+    "tags": ["Figma", "Illustrator", "Photoshop"],
+    "invisibleTags": [""],
+    "madeFor": {
+      "en": "NUWE",
+      "es": "NUWE",
+      "ca": "NUWE",
+      "de": "NUWE"
+    },
+    "description": {
+      "en": "NUWE is a gamification company in hiring developers. I work here as a graphic designer and I carry the creatives of social networks, rollups... I visually capture the ideas of my jobmates.",
+      "es": "NUWE es una empresa de gamificación en contratar desarrolladores. Trabajo aquí como diseñador gráfico y llevo las creatividades de redes sociales, rollups... Plasmar visualmente las ideas de mis compañeros.",
+      "ca": "NUWE és una empresa de gamificació en contractar desenvolupadors. Treballo aquí com a dissenyador gràfic i porto les creativitats de xarxes socials, rollups... Plasmar visualment les idees dels meus companys.",
+      "de": "NUWE ist ein Gamification-Unternehmen bei der Einstellung von Entwicklern. Ich arbeite hier als Grafikdesigner und trage die Kreativen der sozialen Netzwerke, Rollups... Ich fange die Ideen meiner Arbeitskollegen visuell ein."
+    },
+    "figmaLink": "",
+    "link": "https://nuwe.io/"
+  },
+  {
+    "id": "AskaQuest",
+    "title": "AskaQuest",
+    "year": 2022,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": 10,
+      "y": 70
+    },
+    "textColor": "#000",
+    "width": 450,
+    "backgroundColor": "#abd7ff",
+    "pathToImg": "/AskaQuest/0.webp",
+    "tags": ["Nextjs", "PostgreSQL", "TypeScript", "Vercel", "SWR"],
+    "invisibleTags": [
+      "App",
+      "Aplicación",
+      "TS",
+      "React",
+      "Mobile",
+      "fullstack",
+      "localStorage",
+      "Red Social",
+      "2022"
+    ],
+    "description": {
+      "en": "Dynamic web application made with NextJS and using a PostgreSQL database, consists of a social network of questions where users can create questions and answer them. The user can follow other users and view their questions, as well as add them as favorites. A login system, following and encryption in the Backend were developed.  ",
+      "es": "Aplicación web dinámica hecha con NextJS y usando una base de datos PostgreSQL, consiste en una red social de preguntas donde los usuarios pueden crear preguntas y responderlas. El usuario puede seguir a otros usuarios y ver sus preguntas, así como agregarlas como favoritas. Un sistema de login, following y encriptación en el Backend se programó.",
+      "ca": "Aplicació web dinàmica feta amb NextJS i usant una base de dades PostgreSQL, consisteix en una xarxa social de preguntes on els usuaris poden crear preguntes i respondre-les. L'usuari pot seguir altres usuaris i veure les seves preguntes, així com agregar-les com a favorites. Un sistema de login, seguiment i encriptació al Backend va ser desenvolupat. ",
+      "de": "Dynamische Webanwendung, die mit NextJS erstellt und eine PostgreSQL-Datenbank verwendet. Es handelt sich um ein soziales Netzwerk von Fragen, in dem Benutzer Fragen erstellen und beantworten können. Der Benutzer kann anderen Benutzern folgen und deren Fragen anzeigen sowie sie als Favoriten hinzufügen. Es wurde ein Login-System, ein Folgen und eine Verschlüsselung im Backend entwickelt."
+    },
+    "githubLink": "https://github.com/PolGubau/AskaQuest",
+    "link": "https://askaquest.vercel.app/"
+  },
+  {
+    "id": "Stickies",
+    "title": "Stickies",
+    "year": 2022,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": 90,
+      "y": 10
+    },
+    "textColor": "#000",
+    "width": 550,
+    "backgroundColor": "#FFABD3",
+    "pathToImg": "/Stickies/0.webp",
+    "tags": ["React", "React Icons", "Styled Components", "TypeScript"],
+    "invisibleTags": [
+      "App",
+      "Aplicación",
+      "Styled Components",
+      "Mobile",
+      "scrud",
+      "Notes",
+      "TodoList",
+      "todo",
+      "2022"
+    ],
+    "description": {
+      "en": "Stickies is an app to take notes and manage them. You can make private notes and classify them into categories.",
+      "es": "Stickies es una app para tomar notas y manejarlas. Puedes hacer notas privadas y clasificarlas en categorías. ",
+      "ca": "Stickies és una app per prendre notes i manejar-les. Es poden fer notes privades i classificar-les en categories.",
+      "de": "Stickies ist eine App zum Notizen machen und verwalten. Sie können private Notizen machen und in Kategorien einteilen."
+    },
+    "githubLink": "https://github.com/PolGubau/stickies",
+    "link": "https://mystickies.vercel.app/"
+  },
+  {
+    "id": "UABmedia",
+    "title": "UAB Mèdia",
+    "year": 2022,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": 30,
+      "y": 80
+    },
+    "textColor": "#000",
+    "width": 290,
+    "backgroundColor": "#faabff",
+    "pathToImg": "/UABMedia/0.webp",
+    "tags": ["PHP", "WebTV", "BOOTSTRAP", "JQUERY", "AWS"],
+    "invisibleTags": [
+      "UAB",
+      "Autonoma",
+      "amazon",
+      "frontend",
+      "comunicacio",
+      "television",
+      "radio",
+      "Universidad",
+      "2022"
+    ],
+    "madeFor": {
+      "en": "Autonomous University of Barcelona",
+      "es": "Universidad autónoma de Barcelona",
+      "ca": "Universitat autònoma de Barcelona",
+      "de": "Autonome Universität Barcelona"
+    },
+    "description": {
+      "en": "Web and mobile application for viewing UAB Mèdia content. On this page you can see the news, television programs, radio and interviews in real time and on demand. You can also listen to the college radio.",
+      "es": "Aplicación web y móvil para la visualización de contenidos de UAB Mèdia. En esta página se pueden ver las notícias, programas de televisión, de radio y entrevistes, tanto en tiempo real como a la carta. También escuchar la radio de la universidad.",
+      "ca": "Aplicació web i mòbil per a la visualització de continguts de la UAB Mèdia. En aquesta pàgina es poden veure les notícies, programes de televisió, de ràdio i entrevistes tant a temps real com a la carta. També escoltar la ràdio de la universitat.",
+      "de": "Web- und Mobilanwendung zur Anzeige von UAB-Mediainhalten. Auf dieser Seite können Sie die Nachrichten, Fernsehprogramme, Radio und Interviews in Echtzeit und auf Abruf sehen. Sie können auch das College-Radio hören."
+    },
+    "githubLink": "https://github.com/orgs/UABmedia/repositories",
+    "link": "https://uab.media/"
+  },
+  {
+    "id": "Rispot",
+    "title": "Rispot",
+    "year": 2022,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": -100,
+      "y": 20
+    },
+    "textColor": "#000",
+    "width": 300,
+    "backgroundColor": "#abfeff",
+    "pathToImg": "/Rispot/0.webp",
+    "tags": ["PHP", "SQL", "JQUERY", "EXCEL"],
+    "invisibleTags": [
+      "fullstack",
+      "frontend",
+      "backend",
+      "Rispot",
+      "graphic",
+      "stadistics",
+      "excel",
+      "pau",
+      "backstage",
+      "2022"
+    ],
+    "madeFor": {
+      "en": "Rispot Reseller",
+      "es": "Rispot Reseller",
+      "ca": "Rispot Reseller",
+      "de": "Rispot Reseller"
+    },
+    "description": {
+      "en": "Rispot is a small product sales company. I have developed the entire internal database system and the 'backstage' of the website, where you can view the data of all sales and see their statistics.",
+      "es": "Rispot es una pequeña empresa de venta de productos. He desarrollado todo el sistema de base de datos interno y 'Backstage' de la página web, donde se puede visualizar los datos de todas las ventas y ver estadísticas de estas.",
+      "ca": "Rispot és una petita empresa de venda de productes. He desenvolupat tot el sistema de la base de dades interna i 'Backstage' de la pàgina web, on es poden visualitzar les dades de totes les vendes i veure estadístiques d'aquestes.",
+      "de": "Rispot ist ein kleines Produktverkaufsunternehmen. Ich habe das gesamte interne Datenbanksystem und das 'Backstage' der Website entwickelt, auf dem Sie die Daten aller Verkäufe anzeigen und deren Statistiken anzeigen können."
+    },
+    "githubLink": "https://github.com/PolGubau/Rispot",
+    "link": "https://www.amazon.es/s?i=merchant-items&me=A1O24E5ASY81J5&rh=p_4%3ARISPOT"
+  },
+  {
+    "id": "AskaQuest",
+    "title": "AskaQuest",
+    "year": 2022,
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": {
+      "x": 10,
+      "y": 70
+    },
+    "textColor": "#000",
+    "width": 450,
+    "backgroundColor": "#abd7ff",
+    "pathToImg": "/AskaQuest/0.webp",
+    "tags": ["Nextjs", "PostgreSQL", "TypeScript", "Vercel", "SWR"],
+    "invisibleTags": [
+      "App",
+      "Aplicación",
+      "TS",
+      "React",
+      "Mobile",
+      "fullstack",
+      "localStorage",
+      "Red Social",
+      "2022"
+    ],
+    "description": {
+      "en": "Dynamic web application made with NextJS and using a PostgreSQL database, consists of a social network of questions where users can create questions and answer them. The user can follow other users and view their questions, as well as add them as favorites. A login system, following and encryption in the Backend were developed.  ",
+      "es": "Aplicación web dinámica hecha con NextJS y usando una base de datos PostgreSQL, consiste en una red social de preguntas donde los usuarios pueden crear preguntas y responderlas. El usuario puede seguir a otros usuarios y ver sus preguntas, así como agregarlas como favoritas. Un sistema de login, following y encriptación en el Backend se programó.",
+      "ca": "Aplicació web dinàmica feta amb NextJS i usant una base de dades PostgreSQL, consisteix en una xarxa social de preguntes on els usuaris poden crear preguntes i respondre-les. L'usuari pot seguir altres usuaris i veure les seves preguntes, així com agregar-les com a favorites. Un sistema de login, seguiment i encriptació al Backend va ser desenvolupat. ",
+      "de": "Dynamische Webanwendung, die mit NextJS erstellt und eine PostgreSQL-Datenbank verwendet. Es handelt sich um ein soziales Netzwerk von Fragen, in dem Benutzer Fragen erstellen und beantworten können. Der Benutzer kann anderen Benutzern folgen und deren Fragen anzeigen sowie sie als Favoriten hinzufügen. Es wurde ein Login-System, ein Folgen und eine Verschlüsselung im Backend entwickelt."
+    },
+    "githubLink": "https://github.com/PolGubau/AskaQuest",
+    "link": "https://askaquest.vercel.app/"
+  },
+  {
+    "id": "GubausAfternoons",
+    "title": "Gubau's Afternoons",
+    "year": 2020,
+
+    "category": {
+      "en": "web",
+      "es": "web",
+      "ca": "web",
+      "de": "web"
+    },
+    "pointOfInterest": { "x": 30, "y": 80 },
+
+    "textColor": "#000",
+    "width": 600,
+    "backgroundColor": "#b49cff",
+    "pathToImg": "/GubauAfternoons/0.webp",
+    "tags": ["HTML", "SCSS", "JQUERY"],
+    "invisibleTags": [
+      "...tagsMobile",
+      "frontend",
+      "Gubau",
+      "GubauAfternoons",
+      "Gubau'sAfternoons",
+      "Gubau's",
+      "Afternoons",
+      "Portfolio",
+      "black",
+      "2020"
+    ],
+    "description": {
+      "en": "Gubau's Afternoons shows where I spent my afternoons when I was in high school. I used it as a portfolio for two years and it's one of the pages that I have worked on the most. You can see in detail many projects that I have not shown here.",
+      "es": "Gubau's Afternoons muestra en lo que gastaba mis tardes cuando iba al instituto. La usé de portfolio durante dos años y es una de las páginas que más he trabajado. Se pueden ver a detalle muchos proyectos que no he mostrado aquí.",
+      "ca": "Gubau's Afternoons mostra on gastava les tardes quan anava a l'institut. La vaig fer servir de portafoli durant dos anys i és una de les pàgines que més he treballat. Es poden veure detalladament molts projectes que no he mostrat aquí.",
+      "de": "Gubau's Afternoons zeigt, wo ich meine Nachmittage verbracht habe, als ich in der Schule war. Ich habe es zwei Jahre lang als Portfolio benutzt und es ist eine der Seiten, an denen ich am meisten gearbeitet habe. Sie können im Detail viele Projekte sehen, die ich hier nicht gezeigt habe."
+    },
+    "githubLink": "https://github.com/PolGubau/gubauafternoons.com",
+
+    "link": "https://gubauafternoons.com/"
+  }
+]

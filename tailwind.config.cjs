@@ -6,7 +6,15 @@ module.exports = {
       colors: {
         background: {
           DEFAULT: "#e7edf4",
-          dark: "#1F1F1F",
+          dark: "#1e1e1e",
+        },
+        primary: {
+          DEFAULT: "#c8eeff",
+          dark: "#c8eeff",
+        },
+        accent: {
+          DEFAULT: "#ff4",
+          dark: "#ff4",
         },
       },
     },

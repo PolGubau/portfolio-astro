@@ -1,0 +1,17 @@
+---
+ import { type Project } from "@/types.d";
+
+interface Props {
+    project: Project
+}
+const {project} = Astro.props;
+---
+
+
+<li class='h-96 p-6 transition-all rounded-2xl overflow-hidden hover:brightness-90 hover:cursor-pointer flex-grow w-[35%]' 
+    style={{
+        backgroundColor: project.backgroundColor,
+    }}>
+    <h2 class='text-2xl'>{project.title}</h2>
+    <img src={'/images/'+project.pathToImg} alt={project.title} class='w-full'/>
+</li>

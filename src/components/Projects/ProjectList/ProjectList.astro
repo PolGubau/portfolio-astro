@@ -1,0 +1,32 @@
+---
+ import ProjectInList from "@c/Projects/ProjectInList/ProjectInList.astro";
+ import { type Project } from "@/types.d";
+
+ interface Props {
+    projects: Project[]
+  }
+const {projects=[]} = Astro.props
+---
+
+<ul id='projectList' class='flex flex-wrap gap-8'>
+     {projects.map(p=>
+        <ProjectInList project={p} />
+    )} 
+</ul>
+            
+<style>
+    /* create a layout effect, the first and 3th child are w-40%, the others 2 60% */
+    
+    
+    
+    #projectList > li:nth-child(4n+3), #projectList > li:nth-child(4n+4) {
+        width: 40%;
+    }
+    
+     #projectList > li:nth-child(4n+1), #projectList > li:nth-child(4n+2) {
+        width: 60%;
+    }
+    
+    
+    
+</style>

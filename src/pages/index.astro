@@ -1,5 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@l/Layout.astro";
+import Header from "@c/Header/Header.astro";
+import projects from "../data/projects.json";
+ import ProjectList from "@c/Projects/ProjectList/ProjectList.astro";
+import type { Project } from "@/types";
+
+
+
+const allProjects: Project[] = projects;
 ---
 
-<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer" />
+<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
+    
+ <ProjectList projects={allProjects} />
+            
+ </Layout>
+
+
+ 
