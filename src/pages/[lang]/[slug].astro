@@ -61,7 +61,7 @@ const { Content } = await page.render();
       >
         {p.description}
       </p>
-      <Markdown>
+      <Markdown projectColor={p.backgroundColor}>
         <Content />
       </Markdown>
     </main>

@@ -1,8 +1,122 @@
-<slot />
+---
+import { colors } from "../../models";
+interface Props {
+  projectColor: string;
+}
+const { projectColor } = Astro.props;
 
-<style>
-  li {
-    list-style: none;
-    background-color: aquamarine;
+const colorPrimary = colors.primary;
+const colorAccent = colors.accent;
+const colorBackground = colors.background;
+---
+
+<section class="markdown">
+  <slot />
+</section>
+
+<style
+  is:global
+  lang="less"
+  define:vars={{ colorPrimary, colorAccent, projectColor, colorBackground }}
+>
+  .markdown {
+    h1 {
+      background-color: var(--projectColor);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+      padding: 0.5rem 1rem;
+      rounded: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+    }
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+    }
+    h5 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+    }
+    h6 {
+      font-size: 0.875rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 1.5rem 0;
+    }
+    li {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 1.5rem 0;
+    }
+    a {
+      color: var(--colorPrimary);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease-in-out;
+      background-color: var(--colorBackground);
+
+      filter: brightness(0.9);
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+    strong {
+      font-weight: 600;
+    }
+    em {
+      font-style: italic;
+    }
+    blockquote {
+      border-left: 0.25rem solid var(--colorPrimary);
+      font-size: 1.25rem;
+      font-style: italic;
+      font-weight: 600;
+      margin-left: 0;
+      margin: 1.5rem 0;
+      padding-left: 1rem;
+    }
+    code {
+      background-color: var(--colorBackground);
+      filter: brightness(0.8);
+      border-radius: 0.5rem;
+      font-family: var(--font-family-mono);
+      font-size: 0.875rem;
+      font-weight: 400;
+      padding: 0.25rem 0.5rem;
+    }
+    pre {
+      filter: brightness(0.8);
+      background-color: var(--colorBackground);
+      border-radius: 0.5rem;
+      font-family: var(--font-family-mono);
+      font-size: 0.875rem;
+      font-weight: 400;
+      margin: 1.5rem 0;
+      padding: 0.5rem;
+    }
+    img {
+      border-radius: 0.5rem;
+      height: auto;
+      margin: 1.5rem 0;
+      max-width: 100%;
+    }
   }
 </style>

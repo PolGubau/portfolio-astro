@@ -1,6 +1,5 @@
 ---
-layout: ../layouts/BaseLayout.astro
-
+ 
 id: Beecipes
 title: Beecipes
 date: 2023-08-08
@@ -32,6 +31,7 @@ link: https://beecipes.vercel.app
 ---
 
 # Hi there!
+## 2 Hi there! 
 
 This Markdown file creates a page at `your-domain.com/page-1/`
 
