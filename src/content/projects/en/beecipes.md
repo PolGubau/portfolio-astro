@@ -1,4 +1,6 @@
 ---
+layout: ../layouts/BaseLayout.astro
+
 id: Beecipes
 title: Beecipes
 date: 2023-08-08
