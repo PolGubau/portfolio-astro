@@ -10,7 +10,7 @@ const { project, index } = Astro.props;
 const p: Project = project.data;
 const link = `/${project.slug}`;
 
-const milisecods = index * 100;
+const milisecods = index * 50;
 
 const varIndex = `${milisecods}ms`;
 ---
@@ -34,7 +34,7 @@ const varIndex = `${milisecods}ms`;
 
 <style define:vars={{ varIndex }}>
   .animation {
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-delay: var(--varIndex);
     animation-name: animation;
     animation-fill-mode: forwards;
