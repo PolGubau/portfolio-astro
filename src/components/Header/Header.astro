@@ -1,5 +1,5 @@
 ---
-
+import { ROUTES } from "../../models";
 const name = "Pol Gubau Amores";
 const subtitle = "Software Engineer and UX Designer";
 const tabs = [
@@ -8,45 +8,61 @@ const tabs = [
 ];
 
 const { pathname } = Astro.url;
-const isActive =(tab):boolen => {
+const isActive = (tab: { name: string; href: string }): boolean => {
   // home will be '/', so just just return true to home if is '/'
-  if (tab.href === "/") return pathname === "/";
+  if (tab.href === "/") return pathname === ROUTES.HOME;
+  if (tab.href.startsWith("/p/")) return pathname === "/";
+
+  // if href is /p/[project.id], we need to check if the pathname starts with /p/[project.id] and then return true to home
+
   // if not home, check if the pathname starts with the tab href
   return pathname.startsWith(tab.href);
-}
-const isPageAbout = pathname === "/about";
+};
 ---
 
-
-<header class="flex gap-20 justify-between">
-  <div class='flex flex-col gap-4'>
-      <!-- Nav -->
+<header class="flex gap-20 justify-between max-w-5xl px-8 pt-8 w-full">
+  <div class="flex flex-col gap-4">
+    <!-- Nav -->
     <nav class="flex gap-2">
-         {tabs.map((tab) => (
-            <a href={tab.href} class={`
+      {
+        tabs.map((tab) => (
+          <a
+            href={tab.href}
+            class={`
               ${
                 isActive(tab)
                   ? "bg-primary dark:bg-primary-dark hover:brightness-75"
                   : "bg-background-dark/10 dark:bg-background/10 hover:bg-background-dark/40 dark:hover:bg-background/40"
               }
               rounded-full px-3 py-1 text-md 
-               transition-all focus:scale-90`}>{tab.name}</a>
-          ))}
+               transition-all focus:scale-90`}
+          >
+            {tab.name}
+          </a>
+        ))
+      }
     </nav>
-    
+
     <!-- Name and subtitle -->
-    <div class="flex gap-10"> 
-        <div class="flex flex-col justify-center">
-        <h1 class="text-5xl font-black">{ name }</h1>
+    <div class="flex gap-10">
+      <div class="flex flex-col justify-center">
+        <h1 class="text-5xl font-black">{name}</h1>
         <h2 class="text-2xl">{subtitle}</h2>
-        </div>
-        
+      </div>
     </div>
   </div>
-  <div class="relative flex flex-col justify-center w-40 h-40">
-  <img src="/images/me.webp" alt="Profile picture" class="rounded-full w-40 h-40" />
- 
-  <div class='bg-primary transition-all dark:bg-primary-dark rounded-full top-[50%] left-[50%] absolute -z-10 transform  -translate-x-1/2 -translate-y-1/2 w-40 h-40'></div>
+  <div
+    class="relative grid place-items-center w-30 h-30 aspect-auto md:w-40 md:h-40"
+  >
+    <img
+      src="/images/me.webp"
+      alt="Profile picture"
+      class="rounded-full w-30 h-30 aspect-sqare sm:w-40 sm:h-40"
+    />
+
+    <div
+      class="bg-primary transition-all dark:bg-primary-dark rounded-full top-[50%] left-[50%] absolute -z-10 transform -translate-x-1/2 -translate-y-1/2 w-full aspect-square"
+    >
+    </div>
   </div>
-    
 </header>

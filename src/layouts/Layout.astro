@@ -1,12 +1,12 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Header from '../components/Header/Header.astro';
+import Footer from "./Footer.astro";
+import Header from "../components/Header/Header.astro";
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!doctype html>
@@ -18,42 +18,50 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+
+    <meta name="title" content={title} />
+    <meta name="description" content={title} />
+
     <ViewTransitions />
   </head>
 
-  <body class="bg-background dark:bg-background-dark p-8  flex justify-center overflow-x-hidden overflow-y-auto">
-  <main class="w-full max-w-5xl flex gap-16 flex-col">
-            <Header/>         
+  <body
+    class="bg-background dark:bg-background-dark flex justify-center overflow-x-hidden overflow-y-auto relative"
+  >
+    <main class="w-full flex gap-16 flex-col items-center max-w-5xl">
+      <Header />
+      <slot />
 
-    <slot />
-  </main>
+      <Footer />
+    </main>
 
     <style is:global>
       @font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+        font-family: "Poppins";
+        src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
       @font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+        font-family: "Poppins";
+        src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
       @font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins-Light.ttf') format('truetype');
-  font-weight: light;
-  font-style: normal;
-  font-display: swap;
-}
+        font-family: "Poppins";
+        src: url("/fonts/Poppins-Light.ttf") format("truetype");
+        font-weight: light;
+        font-style: normal;
+        font-display: swap;
+      }
 
-*{
-          font-family: 'Poppins', system-ui, sans-serif;
-}
+      * {
+        font-family: "Poppins", system-ui, sans-serif;
+      }
       html {
         box-sizing: border-box;
         scroll-behavior: smooth;
