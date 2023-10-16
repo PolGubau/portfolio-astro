@@ -1,7 +1,5 @@
 ---
 import Layout from "../../Layouts/Layout.astro";
-import ProjectList from "../../components/Projects/ProjectList/ProjectList.astro";
-
 export async function getStaticPaths() {
   return [
     { params: { lang: "en" } },
@@ -9,6 +7,7 @@ export async function getStaticPaths() {
     { params: { lang: "ca" } },
   ];
 }
+import ProjectList from "../../components/Projects/ProjectList/ProjectList.astro";
 ---
 
 <Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
