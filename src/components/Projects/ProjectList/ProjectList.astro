@@ -1,14 +1,16 @@
 ---
-import ProjectInList from "@c/Projects/ProjectInList/ProjectInList.astro";
-import { type Project } from "@/types.d";
-import projects from "../../../data/projects.json";
+import ProjectItem from "@c/Projects/Project/ProjectItem.astro";
+import { getCollection } from "astro:content";
+const { lang } = Astro.params;
 
-const allProjects = projects as Project[];
+const projects = await getCollection("projects", ({ id }) => {
+  return id.startsWith(lang ?? "en");
+});
 ---
 
 <ul
   id="projectList"
   class="gap-8 px-8 pb-8 max-w-5xl grid grid-cols-1 md:grid-cols-2 w-full"
 >
-  {allProjects.map((p) => <ProjectInList project={p} />)}
+  {projects.map((p, i) => <ProjectItem project={p} index={i} />)}
 </ul>

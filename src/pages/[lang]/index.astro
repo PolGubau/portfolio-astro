@@ -1,0 +1,16 @@
+---
+import ProjectList from "../../components/Projects/ProjectList/ProjectList.astro";
+import Layout from "../../Layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "es" } },
+    { params: { lang: "ca" } },
+  ];
+}
+---
+
+<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
+  <ProjectList />
+</Layout>

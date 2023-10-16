@@ -7,10 +7,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const { lang } = Astro.params;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -61,6 +62,9 @@ const { title } = Astro.props;
 
       * {
         font-family: "Poppins", system-ui, sans-serif;
+      }
+      code {
+        font-family: "Fira Code", monospace;
       }
       html {
         box-sizing: border-box;

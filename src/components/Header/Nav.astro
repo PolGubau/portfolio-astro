@@ -1,0 +1,50 @@
+---
+import { ROUTES } from "@/models";
+
+const { lang } = Astro.params;
+
+const linkAbout = `/${lang}${ROUTES.ABOUT}`;
+const linkHome = `/${lang}${ROUTES.HOME}`;
+
+const tabs = [
+  { name: "Home", href: linkHome },
+  { name: "About", href: linkAbout },
+];
+const { pathname } = Astro.url;
+
+const isActive = (tab: { name: string; href: string }): boolean => {
+  // home will be '/', so just just return true to home if is '/'
+  if (tab.href === "/") return pathname === linkHome;
+
+  // if path is /p... give true to home
+  if (pathname.includes("/p/")) pathname === linkHome;
+
+  // if contains about inside of the string about return true to about
+  if (pathname.includes("/about")) return tab.href === linkAbout;
+
+  // if href is /p/[project.id], we need to check if the pathname starts with /p/[project.id] and then return true to home
+
+  // if not home, check if the pathname starts with the tab href
+  return pathname.startsWith(tab.href);
+};
+---
+
+<nav class="flex gap-2">
+  {
+    tabs.map((tab) => (
+      <a
+        href={tab.href}
+        class={`
+              ${
+                isActive(tab)
+                  ? "bg-primary dark:bg-primary-dark hover:brightness-75"
+                  : "bg-background-dark/10 dark:bg-background/10 hover:bg-background-dark/40 dark:hover:bg-background/40"
+              }
+              rounded-full px-3 py-1 text-md 
+               transition-all focus:scale-90`}
+      >
+        {tab.name}
+      </a>
+    ))
+  }
+</nav>

@@ -1,53 +1,37 @@
 ---
-import { ROUTES } from "../../models";
+import Nav from "./Nav.astro";
 const name = "Pol Gubau Amores";
-const subtitle = "Software Engineer and UX Designer";
-const tabs = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-];
+const { lang } = Astro.params;
 
-const { pathname } = Astro.url;
-const isActive = (tab: { name: string; href: string }): boolean => {
-  // home will be '/', so just just return true to home if is '/'
-  if (tab.href === "/") return pathname === ROUTES.HOME;
-  if (tab.href.startsWith("/p/")) return pathname === "/";
-
-  // if href is /p/[project.id], we need to check if the pathname starts with /p/[project.id] and then return true to home
-
-  // if not home, check if the pathname starts with the tab href
-  return pathname.startsWith(tab.href);
+const getLabelByLang = (label: { en: string; es: string; ca: string }) => {
+  switch (lang) {
+    case "es":
+      return label.es;
+    case "ca":
+      return label.ca;
+    default:
+      return label.en;
+  }
 };
+
+const subtitle = getLabelByLang({
+  en: "Software Engineer and UX Designer",
+  es: "Ingeniero de Software y Diseñador UX",
+  ca: "Enginyer de Software i Dissenyador UX",
+});
 ---
 
 <header class="flex gap-20 justify-between max-w-5xl px-8 pt-8 w-full">
   <div class="flex flex-col gap-4">
     <!-- Nav -->
-    <nav class="flex gap-2">
-      {
-        tabs.map((tab) => (
-          <a
-            href={tab.href}
-            class={`
-              ${
-                isActive(tab)
-                  ? "bg-primary dark:bg-primary-dark hover:brightness-75"
-                  : "bg-background-dark/10 dark:bg-background/10 hover:bg-background-dark/40 dark:hover:bg-background/40"
-              }
-              rounded-full px-3 py-1 text-md 
-               transition-all focus:scale-90`}
-          >
-            {tab.name}
-          </a>
-        ))
-      }
-    </nav>
-
+    <Nav />
     <!-- Name and subtitle -->
     <div class="flex gap-10">
       <div class="flex flex-col justify-center">
-        <h1 class="text-5xl font-black">{name}</h1>
-        <h2 class="text-2xl">{subtitle}</h2>
+        <h2 class="text-5xl font-black">{name}</h2>
+        <h3 class="text-2xl">
+          {subtitle}
+        </h3>
       </div>
     </div>
   </div>

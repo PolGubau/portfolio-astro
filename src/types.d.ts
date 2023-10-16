@@ -1,34 +1,26 @@
-export type Projects = Project[];
-
 export interface Project {
   id: string;
   title: string;
-  year: number;
-  category: TranslatedLabels;
-  pointOfInterest: PointOfInterest;
-  textColor: string;
-  width: number;
+  date: Date;
+  category: string;
   backgroundColor: string;
-  pathToImg: string;
+  images: {
+    src: string;
+    alt: string;
+  }[];
   tags: string[];
-  invisibleTags?: string[];
-  description: TranslatedLabels;
-  githubLink?: string;
-  npmCommand?: string;
-  npmLink?: string;
-  link: string;
-  madeFor?: TranslatedLabels;
-  figmaLink?: string;
+  invisibleTags?: string[] | undefined;
+  description: string;
+  githubLink?: string | undefined;
+  npmCommand?: string | undefined;
+  npmLink?: string | undefined;
+  link?: string | undefined;
 }
 
-export interface TranslatedLabels {
-  en: string;
-  es: string;
-  ca: string;
-  de: string;
-}
-
-export interface PointOfInterest {
-  x: number;
-  y: number;
+export interface ProjectMetadata {
+  id: string;
+  slug: string;
+  body: string;
+  collection: string;
+  data: Project;
 }

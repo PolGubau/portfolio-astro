@@ -1,0 +1,52 @@
+---
+import { type Project, type ProjectMetadata } from "../../../types";
+
+interface Props {
+  project: ProjectMetadata;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const p: Project = project.data;
+const link = `/${project.slug}`;
+
+const milisecods = index * 100;
+
+const varIndex = `${milisecods}ms`;
+---
+
+<a
+  href={link}
+  class="animation relative h-96 p-6 transition-all rounded-2xl hover:brightness-90 hover:cursor-pointer flex-grow w-full"
+  style={{
+    backgroundColor: p.backgroundColor,
+  }}
+>
+  <h2 class="text-2xl">{p.title}</h2>
+
+  <img
+    class="h-[83%] object-contain absolute right-4 top-[15%] transition-all"
+    transition:name={p.images[0].src}
+    src={"/images/" + p.images[0].src}
+    alt={p.images[0].alt}
+  />
+</a>
+
+<style define:vars={{ varIndex }}>
+  .animation {
+    animation-duration: 0.5s;
+    animation-delay: var(--varIndex);
+    animation-name: animation;
+    animation-fill-mode: forwards;
+    scale: 90%;
+  }
+
+  @keyframes animation {
+    0% {
+      scale: 90%;
+    }
+    100% {
+      scale: 100%;
+    }
+  }
+</style>
