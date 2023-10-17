@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.2",
@@ -19,7 +18,6 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0",
     "less": "^4.2.0"
   }
 }
