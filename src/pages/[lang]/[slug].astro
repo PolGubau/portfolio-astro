@@ -3,7 +3,7 @@ import { type Project, type ProjectMetadata } from "../../types";
 import { colors } from "../../models";
 import { getCollection } from "astro:content";
 import Layout from "@/Layouts/Layout.astro";
-import Markdown from "../../components/Markdown/Markdown.astro";
+import Markdown from "@c/Markdown/Markdown.astro";
 export async function getStaticPaths() {
   const pages = await getCollection("projects");
 
