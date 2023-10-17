@@ -1,6 +1,6 @@
 ---
-import ProjectItem from "@c/Projects/Project/ProjectItem.astro";
 import { getCollection } from "astro:content";
+import ProjectItem from "../Project/ProjectItem.astro";
 const { lang } = Astro.params;
 
 const projects = await getCollection("projects", ({ id }) => {
