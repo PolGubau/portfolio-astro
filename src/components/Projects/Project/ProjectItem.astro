@@ -8,7 +8,8 @@ interface Props {
 
 const { project, index } = Astro.props;
 const p: Project = project.data;
-const link = `/${project.slug}`;
+
+const link = project.slug ?? "/";
 
 const milisecods = index * 50;
 
@@ -22,7 +23,7 @@ const varIndex = `${milisecods}ms`;
     backgroundColor: p.backgroundColor,
   }}
 >
-  <h2 class="text-2xl">{p.title}</h2>
+  <h2 class="text-2xl text-background-dark">{p.title}</h2>
 
   <img
     class="h-[83%] object-contain absolute right-4 top-[15%] transition-all"

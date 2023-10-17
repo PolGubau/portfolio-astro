@@ -1,9 +1,9 @@
 ---
 import { ROUTES } from "../../models";
-const { lang } = Astro.params;
+import DarkMode from "../DarkMode/DarkMode.astro";
 
-const linkAbout = `/${lang}${ROUTES.ABOUT}`;
-const linkHome = `/${lang}${ROUTES.HOME}`;
+const linkAbout = ROUTES.ABOUT;
+const linkHome = ROUTES.HOME;
 
 const tabs = [
   { name: "Home", href: linkHome },
@@ -26,6 +26,11 @@ const isActive = (tab: { name: string; href: string }): boolean => {
   // if not home, check if the pathname starts with the tab href
   return pathname.startsWith(tab.href);
 };
+
+const activeStyle = "bg-primary dark:bg-primary-dark hover:brightness-75";
+
+const inactiveStyle =
+  "bg-background-dark/10 dark:bg-background/10 hover:bg-background-dark/40 dark:hover:bg-background/40";
 ---
 
 <nav class="flex gap-2">
@@ -34,11 +39,7 @@ const isActive = (tab: { name: string; href: string }): boolean => {
       <a
         href={tab.href}
         class={`
-              ${
-                isActive(tab)
-                  ? "bg-primary dark:bg-primary-dark hover:brightness-75"
-                  : "bg-background-dark/10 dark:bg-background/10 hover:bg-background-dark/40 dark:hover:bg-background/40"
-              }
+              ${isActive(tab) ? activeStyle : inactiveStyle}
               rounded-full px-3 py-1 text-md 
                transition-all focus:scale-90`}
       >
@@ -46,4 +47,6 @@ const isActive = (tab: { name: string; href: string }): boolean => {
       </a>
     ))
   }
+
+  <DarkMode />
 </nav>

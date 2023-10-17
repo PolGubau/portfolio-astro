@@ -28,13 +28,17 @@ const { lang } = Astro.params;
   </head>
 
   <body
-    class="bg-background dark:bg-background-dark flex justify-center overflow-x-hidden overflow-y-auto relative"
+    class={`  flex overflow-x-hidden overflow-y-auto w-full justify-center`}
   >
-    <main class="w-full flex gap-16 flex-col items-center max-w-5xl">
-      <Header />
-      <slot />
+    <main
+      class="bg-background dark:bg-background-dark w-full min-h-screen flex justify-center"
+    >
+      <section class="w-full max-w-5xl gap-16 flex flex-col relative">
+        <Header />
+        <slot />
 
-      <Footer />
+        <Footer />
+      </section>
     </main>
 
     <style is:global>

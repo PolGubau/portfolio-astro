@@ -1,28 +1,22 @@
 ---
-import { type Project, type ProjectMetadata } from "../../types";
-import { colors } from "../../models";
-import { getCollection, type CollectionEntry } from "astro:content";
-import Layout from "../../Layouts/Layout.astro";
-import Markdown from "../../components/Markdown/Markdown.astro";
+import { type Project } from "../types";
+import { colors } from "../models";
+import { getCollection } from "astro:content";
+import Layout from "../Layouts/Layout.astro";
+import Markdown from "../components/Markdown/Markdown.astro";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("projects");
-
-  const paths = pages.map((page: ProjectMetadata) => {
-    const [lang, ...slug] = page.slug.split("/");
-
-    return { params: { lang, slug: slug.join("/") ?? undefined }, props: page };
-  });
-
-  return paths;
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
 }
 
-type Props = CollectionEntry<"projects">;
+const { project } = Astro.props;
+const p: Project = project.data;
 
-const page = Astro.props;
-const p: Project = page.data;
-
-const { Content } = await page.render();
+const { Content } = await project.render();
 ---
 
 <Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">

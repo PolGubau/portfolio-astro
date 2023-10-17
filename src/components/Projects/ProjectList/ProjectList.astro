@@ -1,10 +1,15 @@
 ---
 import { getCollection } from "astro:content";
 import ProjectItem from "../Project/ProjectItem.astro";
-const { lang } = Astro.params;
 
-const projects = await getCollection("projects", ({ id }) => {
-  return id.startsWith(lang ?? "en");
+const unorderedProjects = await getCollection("projects");
+
+// order projects by date
+
+const projects = unorderedProjects.sort((a, b) => {
+  const aDate = new Date(a.data.date);
+  const bDate = new Date(b.data.date);
+  return Number(bDate) - Number(aDate);
 });
 ---
 

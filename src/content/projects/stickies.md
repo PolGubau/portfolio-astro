@@ -3,7 +3,7 @@ id: Stickies
 title: Stickies
 date: 2022-02-16
 category: web
-backgroundColor: '#abd7ff'
+backgroundColor: '#ffddad'
 images: [
     {
         src: /Stickies/0.webp,
