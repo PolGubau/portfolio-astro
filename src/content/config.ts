@@ -1,5 +1,5 @@
-import { schemas } from "@/models/schemas";
 import { defineCollection } from "astro:content";
+import { schemas } from "../models";
 const projectsCollection = defineCollection({
   type: "content",
   schema: schemas.projectSchema,
