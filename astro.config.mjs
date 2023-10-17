@@ -6,6 +6,6 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [tailwind(), mdx()],
   output: "static",
-  site: "https://astronaut.github.io",
-  base: "/my-repo",
+  site: "https://PolGubau.github.io",
+  base: "/portfolio-astro",
 });
