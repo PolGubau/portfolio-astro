@@ -1,54 +1,30 @@
-# Astro Starter Kit: Basics
+# **Pol Gubau Amores**
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Astro Portfolio using TypeScript, tailwind & less for styles**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Welcome to my Astro Portfolio! This webpage is a showcase of my skills and projects.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## **Features**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- User-friendly and visually appealing design
+- Project grid to showcase my work
+- About Me page with information about my skills, experience, and interests
+ 
+## **URL**
 
-## 🚀 Project Structure
+Visit my portfolio at **[https://www.polgubauamores.me](https://www.polgubau.com/)** to see the project in action!
 
-Inside of your Astro project, you'll see the following folders and files:
+## **Technologies Used**
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Astro
+- TypeScript
+- Tailwind
+- Less
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## **Installation**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Clone the repository: **`git clone https://github.com/PolGubau/portfolio-astro`**
+2. Install dependencies: **`pnpm i`**
+3. Run the project: **`npm run dev`**
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Thank you for visiting my portfolio, I hope you enjoy it!
