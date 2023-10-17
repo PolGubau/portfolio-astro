@@ -5,7 +5,4 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), mdx()],
-  output: "static",
-  site: "https://PolGubau.github.io",
-  base: "/portfolio-astro",
 });
