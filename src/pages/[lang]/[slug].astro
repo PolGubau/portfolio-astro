@@ -2,7 +2,7 @@
 import { type Project, type ProjectMetadata } from "../../types";
 import { colors } from "../../models";
 import { getCollection, type CollectionEntry } from "astro:content";
-import Layout from "@/Layouts/Layout.astro";
+import BaseLayout from "@/Layouts/BaseLayout.astro";
 import Markdown from "@c/Markdown/Markdown.astro";
 
 export async function getStaticPaths() {
@@ -25,7 +25,7 @@ const p: Project = page.data;
 const { Content } = await page.render();
 ---
 
-<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
+<BaseLayout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
   <section class="max-w-5xl px-8 pb-8 w-full flex flex-col gap-3">
     <header
       class="grid grid-cols-1 sm:grid-cols-2 justify-strech rounded-2xl items-start p-8 relative"
@@ -70,4 +70,4 @@ const { Content } = await page.render();
       </Markdown>
     </main>
   </section>
-</Layout>
+</BaseLayout>

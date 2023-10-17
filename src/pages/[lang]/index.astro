@@ -6,10 +6,10 @@ export async function getStaticPaths() {
     { params: { lang: "ca" } },
   ];
 }
-import Layout from "@/Layouts/Layout.astro";
+import BaseLayout from "@/Layouts/BaseLayout.astro";
 import ProjectList from "@c/Projects/ProjectList/ProjectList.astro";
 ---
 
-<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
+<BaseLayout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
   <ProjectList />
-</Layout>
+</BaseLayout>
