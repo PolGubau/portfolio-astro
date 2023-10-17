@@ -1,24 +1,28 @@
 ---
 import { type Project, type ProjectMetadata } from "../../types";
 import { colors } from "../../models";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@/Layouts/Layout.astro";
 import Markdown from "@c/Markdown/Markdown.astro";
+
 export async function getStaticPaths() {
   const pages = await getCollection("projects");
 
   const paths = pages.map((page: ProjectMetadata) => {
     const [lang, ...slug] = page.slug.split("/");
+
     return { params: { lang, slug: slug.join("/") ?? undefined }, props: page };
   });
 
   return paths;
 }
 
+type Props = CollectionEntry<"projects">;
+
 const page = Astro.props;
 const p: Project = page.data;
+
 const { Content } = await page.render();
-//
 ---
 
 <Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
