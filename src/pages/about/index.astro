@@ -12,7 +12,7 @@ import heretics from "../../assets/logos/heretics.svg";
 import caixaBank from "../../assets/logos/caixaBank.svg";
 import novartis from "../../assets/logos/novartis.svg";
 import santander from "../../assets/logos/santander.svg";
-  
+import PolArrow from "../../assets/PolArrow.svg";
 // actual year - 2018
 const yearsActive = new Date().getFullYear() - 2018;
 
@@ -82,17 +82,21 @@ const allCompanies:Company[] = [
   description="I'm a full-stack developer and UX designer based in Barcelona with +5 years of experience. I love to create beautiful and functional websites and apps."
 >
   <Header />
-  <main class="px-8 flex gap-8 flex-col">
+  <main class="px-8 flex gap-8 flex-col py-8">
     
-    
+    <div class='relative px-4 py-16 rounded-3xl'>
     <h3
-      class="text-xl sm:text-3xl text-center bg-primary p-4 rounded-3xl"
+      class="text-xl sm:text-3xl text-center"
       style={{
         textWrap: "balance",
       }}
     >
       A pixel perfectionist, even though I work with vectors. 🎨👨‍💻
     </h3>
+    <div class='absolute w-12 bottom-8 right-64 md:right-32'  transition:name='arrow'>
+    <Image src={PolArrow} widths={[PolArrow.width]} alt={`Icon with pol name as a figma arrow`} />
+    </div>
+    </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
       <p class="text-center p-4 sm:text-lg rounded-3xl bg-slate-300 ">
