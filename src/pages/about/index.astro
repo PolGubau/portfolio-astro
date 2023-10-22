@@ -1,7 +1,9 @@
 ---
 import Layout from "../../Layouts/Layout.astro";
-import Header from "../../components/Header/Header.astro";
+import Header from "../../Layouts/Header.astro";
 import { Image } from "astro:assets";
+
+import PolArrow from "../../assets/PolArrow.svg";
 import nuwe from "../../assets/logos/nuwe.svg";
 import almato from "../../assets/logos/almato.svg";
 import binance from "../../assets/logos/binance.svg";
@@ -12,69 +14,85 @@ import heretics from "../../assets/logos/heretics.svg";
 import caixaBank from "../../assets/logos/caixaBank.svg";
 import novartis from "../../assets/logos/novartis.svg";
 import santander from "../../assets/logos/santander.svg";
-import PolArrow from "../../assets/PolArrow.svg";
-// actual year - 2018
-const yearsActive = new Date().getFullYear() - 2018;
+import { getCollection } from "astro:content";
+import { formatString } from "../../utils/formatString";
 
 interface Company {
   name: string;
-  logo: string;
+  logo: any;
   url: string;
+  color: string;
 }
-const allCompanies:Company[] = [
+export const allCompanies: Company[] = [
   {
     name: "TrackUp",
     logo: trackup,
-    url: "https://trackup.es",
+    url: "https://trackupweb.vercel.app",
+    color: "#E0CECA",
   },
   {
     name: "Mesalvo",
     logo: mesalvo,
     url: "https://mesalvo.com",
+    color: "#CAE0CE",
   },
   {
     name: "UAB",
     logo: uab,
-    url: "https://mesalvo.com",
+    url: "https://www.uab.cat",
+    color: "#D1E0CA",
   },
   {
     name: "CaixaBank",
     logo: caixaBank,
     url: "https://caixaBank.com",
+    color: "#CACBE0",
   },
   {
     name: "Novartis",
     logo: novartis,
-    url: "https://caixaBank.com",
+    url: "https://www.novartis.com/es-es/",
+    color: "#CADDE0",
   },
   {
     name: "santander",
     logo: santander,
-    url: "https://caixaBank.com",
+    url: "https://www.bancosantander.es/particulares",
+    color: "#E0CACA",
   },
   {
     name: "Heretics",
     logo: heretics,
-    url: "https://heretics.com",
+    url: "https://teamheretics.com/es/",
+    color: "#E0DECA",
   },
   {
     name: "NUWE",
     logo: nuwe,
     url: "https://nuwe.io",
+    color: "#CAE0CB",
   },
   {
     name: "Binance",
     logo: binance,
     url: "https://binance.com",
+    color: "#E0DACA",
   },
   {
     name: "Almato",
     logo: almato,
     url: "https://almato.com",
+    color: "#DECAE0",
   },
-  
-]
+];
+const yearsActive = new Date().getFullYear() - 2018;
 
+const uStudies = await getCollection("studies");
+const studies = uStudies.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+
+const allColors: string[] = studies.map((s) => s.data.backgroundColor);
 ---
 
 <Layout
@@ -83,42 +101,122 @@ const allCompanies:Company[] = [
 >
   <Header />
   <main class="px-8 flex gap-8 flex-col py-8">
-    
-    <div class='relative px-4 py-16 rounded-3xl'>
-    <h3
-      class="text-xl sm:text-3xl text-center"
-      style={{
-        textWrap: "balance",
-      }}
-    >
-      A pixel perfectionist, even though I work with vectors. 🎨👨‍💻
-    </h3>
-    <div class='absolute w-12 bottom-8 right-64 md:right-32'  transition:name='arrow'>
-    <Image src={PolArrow} widths={[PolArrow.width]} alt={`Icon with pol name as a figma arrow`} />
-    </div>
+    <div class="relative px-4 pb-16 rounded-3xl">
+      <h3
+        class="text-xl sm:text-3xl text-center"
+        style={{
+          textWrap: "balance",
+        }}
+      >
+        A pixel perfectionist, even though I work with vectors. 🎨👨‍💻
+      </h3>
+      <div class="absolute w-12 bottom-7 right-[30vw]" transition:name="arrow">
+        <Image
+          src={PolArrow}
+          width={50}
+          alt={`Icon with pol name as a figma arrow`}
+        />
+      </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-      <p class="text-center p-4 sm:text-lg rounded-3xl bg-slate-300 ">
-        Passionate software developer and UX designer with <strong> +{yearsActive} years </strong>
-        of experience.
+      <p class="text-center p-4 sm:text-lg rounded-3xl bg-slate-300">
+        Passionate software developer and UX designer with <strong>
+          +{yearsActive} years
+        </strong>
+         of experience.
       </p>
-      <p class='p-4 rounded-3xl sm:text-lg bg-slate-300 text-center '>
-        Specialized in web development and have worked from small websites to <strong> large-scale </strong> web applications.
+      <p class="p-4 rounded-3xl sm:text-lg bg-slate-300 text-center">
+        Specialized in web development and have worked from small websites to <strong
+        >
+          large-scale
+        </strong> web applications.
       </p>
     </div>
-    
-    
-        <h3 class=' mt-8 w-full text-center text-3xl '>Some organizations I've worked with</h3>
-        <section class='grid grid-cols-2  md:grid-cols-3 gap-8 mt-8  justify-center justify-items-center'>
-          {allCompanies.map((c)=>
-              <a href={c.url} class='cursor-pointer transition-all bg-slate-300 p-4 rounded-3xl flex justify-center items-center hover:scale-95'  target='_blank'><Image src={c.logo} widths={[nuwe.width]} alt={`Logo of ${c.name}`} /></a>
-          )}
-  </section>
- 
 
+    <h3 class="mt-16 w-full text-center text-3xl">
+      Some organizations I've worked with
+    </h3>
+    <section
+      class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-8 justify-center justify-items-center"
+    >
+      {
+        allCompanies.map((c) => (
+          <a
+            href={c.url}
+            class="cursor-pointer transition-all p-4 rounded-3xl flex justify-center items-center hover:scale-95"
+            target="_blank"
+            style={{
+              backgroundColor: c.color,
+            }}
+          >
+            {c.logo && (
+              <Image src={c.logo} width={150} alt={`Logo of ${c.name}`} />
+            )}{" "}
+          </a>
+        ))
+      }
+    </section>
 
-    
-    
+    <section class="flex flex-col gap-8">
+      <h3 class="mt-16 w-full text-center text-3xl">Where I've learned from</h3>
+
+      <article class="relative">
+        <div
+          class="w-1 left-[6px] absolute h-full -z-0"
+          style={{
+            background: `linear-gradient(180deg, ${allColors.join(", ")})`,
+          }}
+        >
+        </div>
+        <ul class="flex gap-8 flex-col">
+          {
+            studies.map((s) => {
+              const dateFormatted = new Date(s.data.date).toLocaleDateString(
+                "en-US",
+                {
+                  year: "numeric",
+                  month: "long",
+                }
+              );
+
+              return (
+                <section class="mt-0 flex gap-2 md:gap-4">
+                  <div
+                    class="min-w-4 mt-2 h-4 aspect-square  rounded-full bg-background z-10"
+                    style={{
+                      border: `4px solid ${s.data.backgroundColor}`,
+                    }}
+                  />
+
+                  <div class="flex gap-2 flex-col">
+                    <header class="flex gap-2 items-center">
+                      <h4 class="text-2xl font-bold">{s.data.title}</h4>
+                      {s.data.subtitle && <p>- {s.data.subtitle}</p>}
+                    </header>
+                    <p class="text-lg">{s.data.range}</p>
+
+                    <ul class="flex gap-1">
+                      {s.data.tags.map((t: string) => (
+                        <li
+                          style={{
+                            backgroundColor: s.data.backgroundColor,
+                          }}
+                          class="text-sm  rounded-3xl p-1 px-2 mr-2"
+                        >
+                          {formatString(t)}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p class="text-lg">{s.data.description}</p>
+                  </div>
+                </section>
+              );
+            })
+          }
+        </ul>
+      </article>
+    </section>
   </main>
 </Layout>

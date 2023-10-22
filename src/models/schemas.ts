@@ -21,4 +21,23 @@ export const schemas = {
     npmLink: z.string().url().min(1).optional(),
     link: z.string().url().min(1).optional(),
   }),
+
+  studySchema: z.object({
+    id: z.string().min(1),
+    title: z.string().min(1),
+    subtitle: z.string().min(1).optional(),
+    range: z.string().min(1),
+    date: z.date(),
+    category: z.string().min(1),
+    backgroundColor: z.string().min(1),
+    images: z.array(
+      z.object({
+        src: z.string().min(1),
+        alt: z.string().min(1),
+      })
+    ),
+    tags: z.array(z.string().min(1)),
+    description: z.string().min(1),
+    link: z.string().url().min(1).optional(),
+  }),
 };

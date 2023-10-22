@@ -1,20 +1,26 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import Header from "../components/Header/Header.astro";
+import Header from "../Layouts/Header.astro";
 import ProjectList from "../components/Projects/ProjectList/ProjectList.astro";
 import PolArrow from "../assets/PolArrow.svg";
 import { Image } from "astro:assets";
-
 ---
 
 <Layout
   title="Pol Gubau Amores | Full-Stack Developer and UX designer in Barcelona"
   description="I'm a full-stack developer and UX designer based in Barcelona. I love to create beautiful and functional websites and apps."
 >
-  <Header />    
-  
-  <div class='absolute w-12 top-64 -right-32 md:invisible' transition:name='arrow'>
-    <Image src={PolArrow} widths={[PolArrow.width]} alt={`Icon with pol name as a figma arrow`} />
+  <Header />
+
+  <div
+    class="absolute w-12 top-64 -right-32 md:invisible"
+    transition:name="arrow"
+  >
+    <Image
+      src={PolArrow}
+      width={50}
+      alt={`Icon with pol name as a figma arrow`}
+    />
   </div>
 
   <ProjectList />

@@ -1,10 +1,15 @@
 import { defineCollection } from "astro:content";
 import { schemas } from "../models";
-const projectsCollection = defineCollection({
+const projects = defineCollection({
   type: "content",
   schema: schemas.projectSchema,
 });
+const studies = defineCollection({
+  type: "content",
+  schema: schemas.studySchema,
+});
 
 export const collections = {
-  projects: projectsCollection,
+  projects,
+  studies,
 };
