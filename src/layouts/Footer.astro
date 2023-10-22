@@ -1,15 +1,43 @@
 ---
+import { Image } from "astro:assets";
+import githubLogo from "./icons/github.svg";
+import linkedinLogo from "./icons/linkedin.svg";
 
+const currentYear = new Date().getFullYear();
 ---
 
 <footer>
   <div class="flex flex-col items-center justify-center gap-4 mb-32">
-    <div class="flex gap-4">Pol Gubau Amores, 2023</div>
-    <div class="flex gap-2">
-      <a target="_blank" href="https://github.com/polgubau"> Github</a>
-      <a target="_blank" href="https://www.linkedin.com/in/polgubauamores/">
-        Linkedin</a
+    <a
+      download="Pol Gubau Amores CV"
+      href="/files/cv2023.pdf"
+      class="bg-slate-800 rounded-xl px-4 py-2 text-white cursor-pointer hover:scale-95 transition-all"
+    >
+      Download my CV</a
+    >
+    <div class="flex gap-4">Pol Gubau Amores, {currentYear}</div>
+    <div class="flex gap-3 items-center">
+      <a
+        target="_blank"
+        href="https://github.com/polgubau"
+        class="text-slate-800 hover:scale-95 transition-all"
       >
+        <Image class="w-6 h-6" src={githubLogo} alt="Github" />
+      </a>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/polgubauamores/"
+        class="text-slate-800 hover:scale-95 transition-all"
+      >
+        <Image src={linkedinLogo} alt="Github" class="w-6 h-6" />
+      </a>
+      <!-- <a
+        target="_blank"
+        href="blog.polgubau.com"
+        class="bg-slate-800 text-sm rounded-lg px-2 py-1 text-white"
+      >
+        Blog</a
+      > -->
     </div>
   </div>
 </footer>
