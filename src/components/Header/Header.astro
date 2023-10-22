@@ -1,38 +1,47 @@
 ---
 import { TransitionNames } from "../../models/keys";
 import Nav from "./Nav.astro";
-const name = "Pol Gubau Amores";
-const { lang } = Astro.params;
 import en from "../../translations/en.json";
 ---
 
-<header class="flex gap-20 justify-between max-w-5xl px-8 pt-8 w-full">
-  <div class="flex flex-col gap-4">
-    <!-- Nav -->
-    <Nav />
+<header
+  class="flex flex-col gap-2 justify-between max-w-5xl px-8 pt-8 w-full items-center sm:items-start"
+>
+  <!-- Nav -->
+
+  <div
+    class="flex justify-between w-full flex-col-reverse sm:flex-row items-center sm:items-start gap-4"
+  >
     <!-- Name and subtitle -->
-    <div class="flex gap-10">
-      <div class="flex flex-col justify-center">
-        <h2 class="text-5xl font-black">{name}</h2>
-        <h3 class="text-2xl">
+
+    <div class="flex flex-col gap-4 w-full items-center sm:items-start">
+      <Nav />
+
+      <div class="flex flex-col justify-center text-center">
+        <h1 class="text-4xl md:text-5xl font-black">
+          {en.name}
+        </h1>
+        <h2
+          class="text-xl md:text-2xl"
+          style={{
+            textWrap: "balance",
+          }}
+        >
           {en.subtitle}
-        </h3>
+        </h2>
       </div>
     </div>
-  </div>
-  <div
-    class="relative grid place-items-center w-30 h-30 aspect-auto md:w-40 md:h-40"
-  >
-    <img
-      transition:name={TransitionNames.PROFILEIMAGE}
-      src="/images/me.webp"
-      alt="Profile picture"
-      class="rounded-full w-30 h-30 aspect-sqare sm:w-40 sm:h-40"
-    />
 
+    <!-- Image -->
     <div
-      class="bg-primary transition-all dark:bg-primary-dark rounded-full top-[50%] left-[50%] absolute -z-10 transform -translate-x-1/2 -translate-y-1/2 w-full aspect-square"
+      class="flex w-32 h-32 justify-end aspect-square md:w-40 md:h-40 bg-yellow-300 rounded-full items-center sm:items-start"
+      transition:name={TransitionNames.PROFILEIMAGE}
     >
+      <img
+        src="/images/me.webp"
+        alt="Profile picture"
+        class="rounded-full w-full h-full aspect-sqare"
+      />
     </div>
   </div>
 </header>

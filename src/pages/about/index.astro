@@ -1,16 +1,28 @@
 ---
 import Layout from "../../Layouts/Layout.astro";
-import Header, { TransitionNames } from "../../components/Header/Header.astro";
+import Header from "../../components/Header/Header.astro";
 ---
 
-<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
-  <!-- <Header /> -->
-
-  <h1>About me</h1>
-  <img
-    transition:name={TransitionNames.PROFILEIMAGE}
-    src="/images/me.webp"
-    alt="Profile picture"
-    class="rounded-full w-30 h-30 aspect-sqare sm:w-40 sm:h-40"
-  />
+<Layout
+  title="Pol Gubau Amores - Frontend-Stack Developer and UX designer"
+  description="I'm a full-stack developer and UX designer based in Barcelona with +5 years of experience. I love to create beautiful and functional websites and apps."
+>
+  <Header />
+  <main class="px-8 flex gap-8 flex-col">
+    <h3
+      class="text-xl sm:text-3xl text-center bg-primary p-4 rounded-3xl"
+      style={{
+        textWrap: "balance",
+      }}
+    >
+      A pixel perfectionist, even though I work with vectors. 🎨👨‍💻
+    </h3>
+    <p>
+      I'm a pixel perfectionist and a passionate software developer and UX
+      designer with 5 years of experience. I specialize in web development and
+      have worked on various projects, ranging from small websites to
+      large-scale web applications. My goal is to create seamless digital
+      experiences that merge aesthetics with functionality.
+    </p>
+  </main>
 </Layout>

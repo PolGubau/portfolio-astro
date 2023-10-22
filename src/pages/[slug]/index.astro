@@ -1,10 +1,10 @@
 ---
-import { type Project } from "../types";
-import { ROUTES, colors } from "../models";
+import { type Project } from "../../types";
+import { ROUTES, colors } from "../../models";
 import { getCollection } from "astro:content";
-import Layout from "../Layouts/Layout.astro";
-import Markdown from "../components/Markdown/Markdown.astro";
-import Header from "../components/Header/Header.astro";
+import Layout from "../../Layouts/Layout.astro";
+import Markdown from "../../components/Markdown/Markdown.astro";
+import Header from "../../components/Header/Header.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");

@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../Layouts/Layout.astro";
+import Header from "../../components/Header/Header.astro";
+import { ROUTES } from "../../models";
+---
+
+<Layout
+  title="404 - Page not found"
+  description="Page not found, go back to home"
+>
+  <Header />
+
+  <main class="flex flex-col items-center justify-center h-full">
+    <div class="flex flex-col items-center justify-center mb-8">
+      <Image
+        width={200}
+        height={200}
+        src="/images/map.png"
+        alt="404"
+        class="w-48"
+      />
+      <h1 class="p-4 rounded-2xl text-5xl font-bold">Oupsss...</h1>
+      <p class="text-2xl">Page not found</p>
+    </div>
+    <!--  -->
+    <a
+      href={ROUTES.HOME}
+      class="text-xl bg-primary py-2 px-3 rounded-xl hover:underline"
+      >Go back to home</a
+    >
+  </main>
+</Layout>
