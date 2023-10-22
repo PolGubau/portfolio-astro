@@ -1,6 +1,80 @@
 ---
 import Layout from "../../Layouts/Layout.astro";
 import Header from "../../components/Header/Header.astro";
+import { Image } from "astro:assets";
+import nuwe from "../../assets/logos/nuwe.svg";
+import almato from "../../assets/logos/almato.svg";
+import binance from "../../assets/logos/binance.svg";
+import trackup from "../../assets/logos/trackup.svg";
+import mesalvo from "../../assets/logos/mesalvo.svg";
+import uab from "../../assets/logos/uab.svg";
+import heretics from "../../assets/logos/heretics.svg";
+import caixaBank from "../../assets/logos/caixaBank.svg";
+import novartis from "../../assets/logos/novartis.svg";
+import santander from "../../assets/logos/santander.svg";
+  
+// actual year - 2018
+const yearsActive = new Date().getFullYear() - 2018;
+
+interface Company {
+  name: string;
+  logo: string;
+  url: string;
+}
+const allCompanies:Company[] = [
+  {
+    name: "TrackUp",
+    logo: trackup,
+    url: "https://trackup.es",
+  },
+  {
+    name: "Mesalvo",
+    logo: mesalvo,
+    url: "https://mesalvo.com",
+  },
+  {
+    name: "UAB",
+    logo: uab,
+    url: "https://mesalvo.com",
+  },
+  {
+    name: "CaixaBank",
+    logo: caixaBank,
+    url: "https://caixaBank.com",
+  },
+  {
+    name: "Novartis",
+    logo: novartis,
+    url: "https://caixaBank.com",
+  },
+  {
+    name: "santander",
+    logo: santander,
+    url: "https://caixaBank.com",
+  },
+  {
+    name: "Heretics",
+    logo: heretics,
+    url: "https://heretics.com",
+  },
+  {
+    name: "NUWE",
+    logo: nuwe,
+    url: "https://nuwe.io",
+  },
+  {
+    name: "Binance",
+    logo: binance,
+    url: "https://binance.com",
+  },
+  {
+    name: "Almato",
+    logo: almato,
+    url: "https://almato.com",
+  },
+  
+]
+
 ---
 
 <Layout
@@ -9,6 +83,8 @@ import Header from "../../components/Header/Header.astro";
 >
   <Header />
   <main class="px-8 flex gap-8 flex-col">
+    
+    
     <h3
       class="text-xl sm:text-3xl text-center bg-primary p-4 rounded-3xl"
       style={{
@@ -17,12 +93,28 @@ import Header from "../../components/Header/Header.astro";
     >
       A pixel perfectionist, even though I work with vectors. 🎨👨‍💻
     </h3>
-    <p>
-      I'm a pixel perfectionist and a passionate software developer and UX
-      designer with 5 years of experience. I specialize in web development and
-      have worked on various projects, ranging from small websites to
-      large-scale web applications. My goal is to create seamless digital
-      experiences that merge aesthetics with functionality.
-    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <p class="text-center p-4 sm:text-lg rounded-3xl bg-slate-300 ">
+        Passionate software developer and UX designer with <strong> +{yearsActive} years </strong>
+        of experience.
+      </p>
+      <p class='p-4 rounded-3xl sm:text-lg bg-slate-300 text-center '>
+        Specialized in web development and have worked from small websites to <strong> large-scale </strong> web applications.
+      </p>
+    </div>
+    
+    
+        <h3 class=' mt-8 w-full text-center text-3xl '>Some organizations I've worked with</h3>
+        <section class='grid grid-cols-2  md:grid-cols-3 gap-8 mt-8  justify-center justify-items-center'>
+          {allCompanies.map((c)=>
+              <a href={c.url} class='cursor-pointer transition-all bg-slate-300 p-4 rounded-3xl flex justify-center items-center hover:scale-95'  target='_blank'><Image src={c.logo} widths={[nuwe.width]} alt={`Logo of ${c.name}`} /></a>
+          )}
+  </section>
+ 
+
+
+    
+    
   </main>
 </Layout>

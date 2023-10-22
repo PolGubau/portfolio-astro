@@ -17,7 +17,7 @@ import en from "../../translations/en.json";
     <div class="flex flex-col gap-4 w-full items-center sm:items-start">
       <Nav />
 
-      <div class="flex flex-col justify-center text-center">
+      <div class="flex flex-col justify-center text-center sm:text-start">
         <h1 class="text-4xl md:text-5xl font-black">
           {en.name}
         </h1>
@@ -34,7 +34,7 @@ import en from "../../translations/en.json";
 
     <!-- Image -->
     <div
-      class="flex w-32 h-32 justify-end aspect-square md:w-40 md:h-40 bg-yellow-300 rounded-full items-center sm:items-start"
+      class="flex w-32 h-32 justify-end aspect-square md:w-40 md:h-40 bg-primary rounded-full items-center sm:items-start"
       transition:name={TransitionNames.PROFILEIMAGE}
     >
       <img
