@@ -1,0 +1,16 @@
+---
+import Layout from "../../Layouts/Layout.astro";
+import Header, { TransitionNames } from "../../components/Header/Header.astro";
+---
+
+<Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
+  <!-- <Header /> -->
+
+  <h1>About me</h1>
+  <img
+    transition:name={TransitionNames.PROFILEIMAGE}
+    src="/images/me.webp"
+    alt="Profile picture"
+    class="rounded-full w-30 h-30 aspect-sqare sm:w-40 sm:h-40"
+  />
+</Layout>

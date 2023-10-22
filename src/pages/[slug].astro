@@ -4,7 +4,7 @@ import { ROUTES, colors } from "../models";
 import { getCollection } from "astro:content";
 import Layout from "../Layouts/Layout.astro";
 import Markdown from "../components/Markdown/Markdown.astro";
-import Icon from "astro-icon";
+import Header from "../components/Header/Header.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -21,6 +21,8 @@ const { Content } = await project.render();
 ---
 
 <Layout title="Pol Gubau Amores | Full-Stack Developer and UX designer">
+  <Header />
+
   <section class="max-w-5xl px-8 pb-8 w-full flex flex-col gap-3">
     <header
       class="grid grid-cols-1 sm:grid-cols-2 justify-strech rounded-2xl items-start p-8 relative"
@@ -31,10 +33,9 @@ const { Content } = await project.render();
       <div class="flex flex-col gap-4">
         <a
           href={ROUTES.HOME}
-          class="bg-background-dark transition-all bg-opacity-20 w-fit rounded-full py-1 flex items-center pr-3 pl-1 hover:bg-opacity-40"
+          class="bg-background-dark transition-all bg-opacity-20 w-fit rounded-full py-1 flex items-center px-2 hover:bg-opacity-40"
         >
-          <Icon name="ic:round-arrow-drop-up" class="w-6 h-6 -rotate-90" />
-           Return</a
+          {`< Return`}</a
         >
         <h1 class="text-5xl text-background-dark dark:text-white">
           {p.title}
@@ -52,21 +53,23 @@ const { Content } = await project.render();
       </div>
 
       <div class="flex justify-end">
-        <img
-          transition:name={p.images[0].src}
-          src={"/images/" + p.images[0].src}
-          alt={p.images[0].alt}
-          class="w-full max-w-[500px]"
-        />
+        <a href={p.link}>
+          <img
+            transition:name={p.images[0].src}
+            src={"/images/" + p.images[0].src}
+            alt={p.images[0].alt}
+            class="w-full max-w-[500px]"
+          /></a
+        >
       </div>
     </header>
 
     <main class="p-6">
-      <p
+      <!-- <p
         class="text-base leading-relaxed text-gray-700 dark:text-gray-200 mb-8"
       >
         {p.description}
-      </p>
+      </p> -->
       <Markdown projectColor={p.backgroundColor}>
         <Content />
       </Markdown>

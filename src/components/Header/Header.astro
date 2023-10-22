@@ -1,24 +1,9 @@
 ---
+import { TransitionNames } from "../../models/keys";
 import Nav from "./Nav.astro";
 const name = "Pol Gubau Amores";
 const { lang } = Astro.params;
-
-const getLabelByLang = (label: { en: string; es: string; ca: string }) => {
-  switch (lang) {
-    case "es":
-      return label.es;
-    case "ca":
-      return label.ca;
-    default:
-      return label.en;
-  }
-};
-
-const subtitle = getLabelByLang({
-  en: "Software Engineer and UX Designer",
-  es: "Ingeniero de Software y Diseñador UX",
-  ca: "Enginyer de Software i Dissenyador UX",
-});
+import en from "../../translations/en.json";
 ---
 
 <header class="flex gap-20 justify-between max-w-5xl px-8 pt-8 w-full">
@@ -30,7 +15,7 @@ const subtitle = getLabelByLang({
       <div class="flex flex-col justify-center">
         <h2 class="text-5xl font-black">{name}</h2>
         <h3 class="text-2xl">
-          {subtitle}
+          {en.subtitle}
         </h3>
       </div>
     </div>
@@ -39,6 +24,7 @@ const subtitle = getLabelByLang({
     class="relative grid place-items-center w-30 h-30 aspect-auto md:w-40 md:h-40"
   >
     <img
+      transition:name={TransitionNames.PROFILEIMAGE}
       src="/images/me.webp"
       alt="Profile picture"
       class="rounded-full w-30 h-30 aspect-sqare sm:w-40 sm:h-40"
