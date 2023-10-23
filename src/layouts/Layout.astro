@@ -1,24 +1,33 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Footer from "./Footer.astro";
-interface Props {
-  title: string;
-  description: string;
-}
+import { SEO } from "astro-seo";
 
-const { title, description } = Astro.props;
-const { lang } = Astro.params;
+import Footer from "./Footer.astro";
+import { checkImageUrl } from "../utils/all";
+export interface Props {
+  title?: string;
+  description?: string;
+  ogimage?: string;
+}
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const { title, description, ogimage = "/opengraph.jpg" } = Astro.props;
+const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
+
+const makeTitle = title
+  ? title + " | " + "Pol Gubau Amores"
+  : "Pol Gubau Amores | Full-Stack Developer and UX designer in Barcelona";
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={"en"}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{makeTitle}</title>
     <meta name="generator" content={Astro.generator} />
 
     <meta name="title" content={title} />
