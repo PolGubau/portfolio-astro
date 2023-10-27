@@ -2,16 +2,15 @@
 import { TransitionNames } from "../models/keys";
 import Nav from "../components/Header/Nav.astro";
 import en from "../translations/en.json";
+import { Image } from "astro:assets";
 ---
 
 <header
-  class="flex flex-col gap-2 justify-between max-w-5xl px-8 pt-8 w-full items-center sm:items-start"
->
+  class="flex flex-col gap-2 justify-between max-w-5xl px-8 pt-8 w-full items-center sm:items-start">
   <!-- Nav -->
 
   <div
-    class="flex justify-between w-full flex-col-reverse sm:flex-row items-center sm:items-start gap-4"
-  >
+    class="flex justify-between w-full flex-col-reverse sm:flex-row items-center sm:items-start gap-4">
     <!-- Name and subtitle -->
 
     <div class="flex flex-col gap-4 w-full items-center sm:items-start">
@@ -25,8 +24,7 @@ import en from "../translations/en.json";
           class="text-xl md:text-2xl"
           style={{
             textWrap: "balance",
-          }}
-        >
+          }}>
           {en.subtitle}
         </h2>
       </div>
@@ -35,9 +33,11 @@ import en from "../translations/en.json";
     <!-- Image -->
     <div
       class="flex w-32 h-32 justify-end aspect-square md:w-40 md:h-40 bg-primary rounded-full items-center sm:items-start"
-      transition:name={TransitionNames.PROFILEIMAGE}
-    >
-      <img
+      transition:name={TransitionNames.PROFILEIMAGE}>
+      <Image
+        width={160}
+        height={160}
+        aria-describedby={"Profile picture of " + en.name}
         src="/images/me.webp"
         alt="Profile picture"
         class="rounded-full w-full h-full aspect-sqare"
